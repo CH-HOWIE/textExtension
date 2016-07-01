@@ -11,18 +11,18 @@
 
 
 @implementation DIYTest1Result
-+ (NSDictionary *)mj_replacedKeyFromPropertyName {
-    
-    return @{
-             @"hello" : @"HeWeather data service 3.0"
-             
-             };
-    
-}
-+ (NSDictionary *)mj_objectClassInArray {
-    return @{
-             @"hello" : [DIYPersonItem class]
-             
-             };
-}
+//+ (NSDictionary *)mj_replacedKeyFromPropertyName {
+//    
+//    return @{
+//             @"hello" : @"HeWeather data service 3.0"
+//             
+//             };
+//    
+//}
+//+ (NSDictionary *)mj_objectClassInArray {
+//    return @{
+//             @"hello" : [DIYPersonItem class]
+//             
+//             };
+//}
 @end

@@ -10,6 +10,7 @@
 #import "DIYTestResult.h"
 #import "MJExtension.h"
 #import "DIYTest1Result.h"
+#import "DIYPersonItem.h"
 
 @interface ViewController ()
 
@@ -52,6 +53,19 @@
     // ----- json 序列化 -----
     NSDictionary *result1Dict = [NSJSONSerialization JSONObjectWithData:data1 options:kNilOptions error:nil];
     // ----- 字典转模型 -----
+    [DIYTest1Result mj_setupReplacedKeyFromPropertyName121:^id(NSString *propertyName) {
+        return @{
+                  @"hello" : @"HeWeather data service 3.0"
+                 
+                };
+    }];
+    [DIYTest1Result mj_setupObjectClassInArray:^NSDictionary *{
+        return @{
+                 @"hello" : [DIYPersonItem class]
+                 
+                 };
+    }];
+    
     DIYTest1Result *result1 = [DIYTest1Result mj_objectWithKeyValues:result1Dict];
     NSLog(@"%s--%@", __func__, result1.hello);
     
